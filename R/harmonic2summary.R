@@ -47,9 +47,9 @@ pred.x<-full["b.x","Boot.Estimate"]*cos(rad)+full["cx","Boot.Estimate"]
 pred.y<-full["b.y","Boot.Estimate"]*cos(rad)+full["retention","Boot.Estimate"]*sin(rad)+full["cy","Boot.Estimate"]
 
 
-full <- full[c("b.x","b.y","phase.angle",
-               "cx","cy","retention","coercion","area",
-               "lag","split.angle","hysteresis.x","hysteresis.y","ampx","ampy","rote.deg","rote.rad",
+full <- full[c("b.x","b.y",
+               "retention","coercion","lag","area","phase.angle",
+               "split.angle","hysteresis.x","hysteresis.y","cx","cy","ampx","ampy","rote.deg","rote.rad",
                "semi.major","semi.minor","focus.x","focus.y","eccentricity"),]
 bootEst<-full[,"Boot.Estimate"]
 names(bootEst) <- rownames(full)
